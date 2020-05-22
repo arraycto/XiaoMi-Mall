@@ -1,32 +1,73 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+
+    <header>
+      <nav>
+        <first-level-nav></first-level-nav>
+      </nav>
+    </header>
+
+    <main>
+
+      <article>
+        <second-level-nav></second-level-nav>
+      </article>
+
+      <article>
+        <router-view></router-view>
+      </article>
+
+      <article>
+        <router-view name="MiShangou"></router-view>
+      </article>
+
+      <article>
+        <router-view name="MiPhone"></router-view>
+      </article>
+
+    </main>
+
   </div>
 </template>
 
+<script>
+import FirstLevelNav from './views/FirstLevelNav.vue'
+import SecondLevelNav from './views/SecondLevelNav.vue'
+
+export default {
+  name: 'app',
+  components: {
+    FirstLevelNav,
+    SecondLevelNav,
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+body,ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 
-#nav {
-  padding: 30px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+main > article {
+  width: 80vw;
+  background-color: red;
+  flex-shrink: 0;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+
 </style>
