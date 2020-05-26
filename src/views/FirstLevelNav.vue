@@ -56,6 +56,7 @@ export default {
 ul {
     width: 80vw;
     display: flex;
+    background-color: rgb(54, 54, 54);
 }
 ul li {
     display: block;

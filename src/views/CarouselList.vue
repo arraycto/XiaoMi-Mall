@@ -1,7 +1,7 @@
 
 
 <template>
-    <div>
+    <div class="caroussei-list">
         <section>
             <mi-carousel></mi-carousel>
         </section>
@@ -24,3 +24,19 @@ export default {
     }
 }
 </script>
+
+
+<style scoped>
+
+.caroussei-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 18% 82%;
+    grid-template-rows: auto;
+    background-color: red;
+}
+
+
+
+
+</style>

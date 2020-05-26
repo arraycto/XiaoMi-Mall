@@ -65,8 +65,10 @@ main {
 
 main > article {
   width: 80vw;
-  background-color: red;
   flex-shrink: 0;
+}
+main > article:first-child {
+  margin: 1.5em 0 1.5em 0;
 }
 
 
